@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 
+
 class App extends React.Component {
 	constructor(props) {
 		super(props);
@@ -16,7 +17,6 @@ class App extends React.Component {
 				// password: 'minimum 3 characaters required',
 				gender: '',
 			},
-			invalid: false,
 		};
 	}
 	handleSubmit = (e) => {
@@ -27,10 +27,35 @@ class App extends React.Component {
 
 
 
-  
+
 	render() {
-		return <h1>Hello, {this.props.name}</h1>;
-	}
+    
+		return (
+			<main>
+				<div className='container'>
+					<h1>INFANTRY {this.props.name}</h1>
+				</div>
+				<div className='container'>
+					<h1>Register {this.props.name}</h1>
+					<form>
+						<input type='text' placeholder='First Name...' />
+						<input type='text' placeholder='Last Name...' />
+						<br />
+						<input type='text' placeholder='Password...' />
+						<input type='text' placeholder='Confirm Password...' />
+						<br />
+						<input type='submit' value='Submit' />
+						<br />
+						<div className='signIn'>
+							<small>Already Have an Account?</small>
+							<button type='sign in' to='/Form'>
+								Sign In
+							</button>
+						</div>
+					</form>
+				</div>
+			</main>
+		);}
 }
 
 export default App;
