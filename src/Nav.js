@@ -10,7 +10,7 @@ function Nav() {
 
 	return (
 		<nav>
-			<h3>Life Planner</h3>
+			<h3>Infantry</h3>
 			<ul className='nav-links'>
 				<Link style={navStyle} to='/Signin'>
 					<li>Sin In</li>
